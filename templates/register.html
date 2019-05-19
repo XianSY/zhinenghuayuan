@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>welcome 智能花园！</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style/simple-line-icons.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'style/fontawesome-all.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'style/styles.css' %}">
+{#    <link rel="stylesheet" type="text/css" href="static/style/simple-line-icons.css">#}
+{#    <link rel="stylesheet" href="/static/style/fontawesome-all.min.css">#}
+{#    <link rel="stylesheet" href="/static/style/styles.css">#}
+    <style>
+        .beijingtu{background-image:url(/static/image/imgs/1.jpg);}
+        .touming{opacity: 0.8}
+    </style>
+</head>
+<body>
+<div class="page-wrapper flex-row align-items-center beijingtu">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-5">
+                <div class="card p-4 touming">
+                    <div class="card-header text-center text-uppercase h4 font-weight-light">
+                        注册
+                    </div>
+
+                    <div class="card-body py-5">
+                        <div class="form-group">
+                            <label class="form-control-label">用户名</label>
+                            <input type="name" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-control-label">邮箱</label>
+                            <input type="email" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-control-label">密码</label>
+                            <input type="password" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-control-label">确认密码</label>
+                            <input type="password" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-success btn-block">创建用户</button>
+                    </div>
+                    <div class="card-footer">
+                        <a href="http://127.0.0.1:8000/index">
+                            <button type="submit" class="btn btn-success btn-block">已有用户</button>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="{% static 'javascript/jquery.min.js' %}"></script>
+{#<script src="/static/javascript/jquery.min.js"></script>#}
+{#<script src="/static/javascript/popper.min.js"></script>#}
+{#<script src="/static/javascript/bootstrap.min.js"></script>#}
+{#<script src="/static/javascript/chart.min.js"></script>#}
+{#<script src="/static/javascript/carbon.js"></script>#}
+{#<script src="/static/javascript/demo.js"></script>#}
+</body>
+</html>
