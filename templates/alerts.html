@@ -94,7 +94,7 @@
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img src="./imgs/avatar-1.png" class="avatar avatar-sm" alt="logo">
+                        <img src="{% static 'image/avatar-1.png' %}" class="avatar avatar-sm" alt="logo">
                         <span class="small ml-1 d-md-down-none">小明123</span>
                     </a>
 
@@ -135,7 +135,7 @@
                     <li class="nav-title">导航栏</li>
 
                     <li class="nav-item">
-                        <a href="index.html" class="nav-link">
+                        <a href="http://127.0.0.1:8000/index" class="nav-link">
                             <i class="icon icon-speedometer"></i> 综合数据
                         </a>
                     </li>
@@ -147,19 +147,19 @@
 
                         <ul class="nav-dropdown-items">
                             <li class="nav-item">
-                                <a href="chartjs.html" class="nav-link">
+                                <a href="http://127.0.0.1:8000/chartjs" class="nav-link">
                                     &nbsp&nbsp&nbsp&nbsp&nbsp<i class="icon icon-energy"></i> 植物简介
                                 </a>
                             </li>
 
                             <li class="nav-item">
-                                <a href="alerts.html" class="nav-link active">
+                                <a href="http://127.0.0.1:8000/alerts" class="nav-link active">
                                     &nbsp&nbsp&nbsp&nbsp&nbsp<i class="icon icon-energy"></i> 影像展示 
                                 </a>
                             </li>
 
                             <li class="nav-item">
-                                <a href="buttons.html" class="nav-link">
+                                <a href="http://127.0.0.1:8000/buttons" class="nav-link">
                                     &nbsp&nbsp&nbsp&nbsp&nbsp<i class="icon icon-energy"></i> 智能调节
                                 </a>
                             </li>
@@ -177,7 +177,7 @@
                             </li> -->
 
                             <li class="nav-item">
-                                <a href="tabs.html" class="nav-link">
+                                <a href="http://127.0.0.1:8000/tabs" class="nav-link">
                                     &nbsp&nbsp&nbsp&nbsp&nbsp<i class="icon icon-energy"></i> 实时监控
                                 </a>
                             </li>
@@ -213,31 +213,31 @@
                         <ul class="nav-dropdown-items">
 
                             <li class="nav-item">
-                                <a href="login.html" class="nav-link">
+                                <a href="http://127.0.0.1:8000/login" class="nav-link">
                                     &nbsp&nbsp&nbsp&nbsp&nbsp<i class="icon icon-umbrella"></i> 登录
                                 </a>
                             </li>
 
                             <li class="nav-item">
-                                <a href="register.html" class="nav-link">
+                                <a href="http://127.0.0.1:8000/register" class="nav-link">
                                     &nbsp&nbsp&nbsp&nbsp&nbsp<i class="icon icon-umbrella"></i> 注册
                                 </a>
                             </li>
 
                             <li class="nav-item">
-                                <a href="blank.html" class="nav-link">
+                                <a href="http://127.0.0.1:8000/blank" class="nav-link">
                                     &nbsp&nbsp&nbsp&nbsp&nbsp<i class="icon icon-umbrella"></i> 个人资料
                                 </a>
                             </li>
 
                             <li class="nav-item">
-                                <a href="invoice.html" class="nav-link">
+                                <a href="http://127.0.0.1:8000/invoice" class="nav-link">
                                     &nbsp&nbsp&nbsp&nbsp&nbsp<i class="icon icon-umbrella"></i> 个人设置
                                 </a>
                             </li>
 
                             <li class="nav-item">
-                                <a href="settings.html" class="nav-link">
+                                <a href="http://127.0.0.1:8000/settings" class="nav-link">
                                     &nbsp&nbsp&nbsp&nbsp&nbsp<i class="icon icon-umbrella"></i> 联系我们
                                 </a>
                             </li>
@@ -250,7 +250,7 @@
         <div class="content">
             <div class="row">
                <video width="1000" height="500" controls="">
-                   <source src="video/movie.mp4" type="video/mp4">
+                   <source src="{% static 'video/movie.mp4' %}" type="video/mp4">
                </video>
             </div>
         </div>

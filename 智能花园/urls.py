@@ -20,6 +20,7 @@ from huayuan import views
 urlpatterns = [
     # path('admin/', admin.site.urls),
     path(r'',views.login),
+    path(r'login/',views.login),
     path(r'register/',views.register),
     path(r'index/',views.index),
     path(r'invoice/',views.invoice),

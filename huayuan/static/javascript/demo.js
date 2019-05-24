@@ -89,7 +89,7 @@ $(document).ready(function () {
             type: 'radar',
             data: {
                 labels: ["待定", "光强", "温度", "待定", "湿度", "待定"],
-                datasets: [{
+                datasets: [{w
                     label: '箱内环境',
                     data: [100, 45, 87, 50, 77, 20],
                     backgroundColor: 'rgba(244, 88, 70, 0.5)',

@@ -6,12 +6,9 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>welcome 智能花园！</title>
-    <link rel="stylesheet" href="{% static 'style/simple-line-icons.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'style/fontawesome-all.min.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'style/styles.css' %}" type="text/css">
-{#    <link rel="stylesheet" href="./static/vendor/simple-line-icons/css/simple-line-icons.css">#}
-{#    <link rel="stylesheet" href="./static/vendor/font-awesome/css/fontawesome-all.min.css">#}
-{#    <link rel="stylesheet" href="./static/css/styles.css">#}
+    <link rel="stylesheet" href="{% static 'style/simple-line-icons.css'  %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'style/fontawesome-all.min.css'  %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'style/styles.css'%}" type="text/css">
     <style>
          /* 下拉按钮样式 */
         .dropbtn {
@@ -59,8 +56,8 @@
         .dropdown:hover .dropbtn {
             background-color: #3e8e41;
         }
-        .aa{
-            background-color:red;
+        .bb{
+            background-color:white;
         }
     </style>
 </head>
@@ -72,7 +69,7 @@
         </a>
 
         <a class="navbar-brand" href="#">
-            <img src="{% static 'image/imgs/logo.png' %}" alt="logo">
+            <img src="{% static 'image/logo.png' %}" alt="logo">
         </a>
 
         <a href="#" class="btn btn-link sidebar-toggle d-md-down-none">
@@ -93,14 +90,14 @@
 
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img src="{% static 'imgs/avatar-1.png' %}" class="avatar avatar-sm" alt="logo">
-                    <span class="small ml-1 d-md-down-none">小明123</span>
+                    <img src="{% static 'image/avatar-1.png' %}" class="avatar avatar-sm" alt="logo">
+                    <span class="small ml-1 d-md-down-none">{{ user }}</span>
                 </a>
 
                 <div class="dropdown-menu dropdown-menu-right">
                     <div class="dropdown-header">账户</div>
 
-                    <a href="#" class="dropdown-item">
+                    <a href="http://127.0.0.1:8000/blank/" class="dropdown-item">
                         <i class="fa fa-user"></i> 个人资料
                     </a>
 
@@ -114,11 +111,11 @@
                         <i class="fa fa-bell"></i> 通知
                     </a>
 
-                    <a href="#" class="dropdown-item">
+                    <a href="invoice.html" class="dropdown-item">
                         <i class="fa fa-wrench"></i> 个人设置
                     </a>
 
-                    <a href="#" class="dropdown-item">
+                    <a href="http://127.0.0.1:8000/" class="dropdown-item">
                         <i class="fa fa-lock"></i> 注销
                     </a>
                 </div>
@@ -140,7 +137,7 @@
 
                     <li class="nav-item nav-dropdown">
                         <a href="#" class="nav-link nav-dropdown-toggle">
-                            <i class="icon icon-energy"></i> 植物管理 <i class="fa fa-caret-left"><</i>
+                            <i class="icon icon-energy"></i> 植物管理 <i class="fa fa-caret-left"></i>
                         </a>
 
                         <ul class="nav-dropdown-items">
@@ -157,7 +154,7 @@
                             </li> -->
 
                             <li class="nav-item">
-                                <a href="http://127.0.0.1:8000/index/chartjs" class="nav-link">
+                                <a href="buttons.html" class="nav-link">
                                     &nbsp&nbsp&nbsp&nbsp&nbsp<i class="icon icon-energy"></i> 智能调节
                                 </a>
                             </li>
@@ -190,7 +187,7 @@
 
                     <li class="nav-item nav-dropdown">
                         <a href="#" class="nav-link nav-dropdown-toggle">
-                            <i class="icon icon-puzzle"></i> 系统设置 <i class="fa fa-caret-left"><</i>
+                            <i class="icon icon-puzzle"></i> 系统设置 <i class="fa fa-caret-left"></i>
                         </a>
 
                         <ul class="nav-dropdown-items">
@@ -219,25 +216,25 @@
 
                     <li class="nav-item nav-dropdown">
                         <a href="#" class="nav-link nav-dropdown-toggle">
-                            <i class="icon icon-umbrella"></i> 个人主页 <i class="fa fa-caret-left"><</i>
+                            <i class="icon icon-umbrella"></i> 个人主页 <i class="fa fa-caret-left"></i>
                         </a>
 
                         <ul class="nav-dropdown-items">
 
                             <li class="nav-item">
-                                <a href="/templates/login.html" class="nav-link">
+                                <a href="login.html" class="nav-link">
                                     &nbsp&nbsp&nbsp&nbsp&nbsp<i class="icon icon-umbrella"></i> 登录
                                 </a>
                             </li>
 
                             <li class="nav-item">
-                                <a href="/templates/register.html" class="nav-link">
+                                <a href="register.html" class="nav-link">
                                     &nbsp&nbsp&nbsp&nbsp&nbsp<i class="icon icon-umbrella"></i> 注册
                                 </a>
                             </li>
 
                             <li class="nav-item">
-                                <a href="blank.html" class="nav-link">
+                                <a href="http://127.0.0.1:8000/blank" class="nav-link">
                                     &nbsp&nbsp&nbsp&nbsp&nbsp<i class="icon icon-umbrella"></i> 个人资料
                                 </a>
                             </li>
@@ -255,7 +252,7 @@
                             </li>
                         </ul>
                     </li>
-                </ul>
+                </ul>   
             </nav>
         </div>
     </div>
@@ -268,19 +265,19 @@
                         </div>
 
                         <div class="card-body">
-                            <canvas id="bar-chart" width="100%" height="50"></canvas>
+                            <div id="Temperature_bar-chart" style="width:650px;height:235px;"></div>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-md-6">
                     <div class="card">
-                        <div class="card-header bg-light">
+                        <div  class="card-header bg-light">
                             土壤湿度
                         </div>
 
-                        <div class="card-body">
-                            <canvas id="line-chart" width="100%" height="50"></canvas>
+                        <div  class="card-body">
+                            <div id="soil_Avg_line-chart" style="width:650px;height:235px;"></div>
                         </div>
                     </div>
                 </div>
@@ -290,11 +287,11 @@
                 <div class="col-md-6">
                     <div class="card">
                         <div class="card-header bg-light">
-                            综合
+                            光照表
                         </div>
 
                         <div class="card-body">
-                            <canvas id="radar-chart" width="100%" height="50"></canvas>
+                            <div id="Illumination_line-chart" style="width:650px;height:235px;"></div>
                         </div>
                     </div>
                 </div>
@@ -306,28 +303,194 @@
                         </div>
 
                         <div class="card-body">
-                            <canvas id="pie-chart" width="100%" height="50"></canvas>
+                            <div id="pie-chart" style="width:500px;height:235px;"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
       <hr>
-    </div>
-{#  </body>#}
-{#</html>#}
+    </div>   
+  </body>
+</html>  
 </div>
 <script src="{% static 'javascript/jquery.min.js' %}"></script>
 <script src="{% static 'javascript/popper.min.js' %}"></script>
 <script src="{% static 'javascript/bootstrap.min.js' %}"></script>
-<script src="{% static 'javascript/chart.min.js' %}"></script>
+<script src="{% static 'javascript/chart.js' %}"></script>
 <script src="{% static 'javascript/carbon.js' %}"></script>
 <script src="{% static 'javascript/demo.js' %}"></script>
-{#<script src="./vendor/jquery/jquery.min.js"></script>#}
-{#<script src="./vendor/popper.js/popper.min.js"></script>#}
-{#<script src="./vendor/bootstrap/js/bootstrap.min.js"></script>#}
-{#<script src="./vendor/chart.js/chart.min.js"></script>#}
-{#<script src="./js/carbon.js"></script>#}
-{#<script src="./js/demo.js"></script>#}
+<script src="{% static 'javascript/echarts.min.js' %}"></script>
+<script src="{% static 'javascript/echarts.js' %}"></script>
+{#<script src="./bootstrapvalidator-master/dist/js/echarts.min.js"></script>#}
+<script type="text/javascript">
+ var mychart = echarts.init(document.getElementById('Temperature_bar-chart'));
+ var option = {
+            title: {
+                text: '温度表'
+            },
+            tooltip: {},
+            legend: {
+                data:['温度']
+            },
+            xAxis: {
+                data: {{ id|safe }}
+            },
+            yAxis: {},
+            series: [{
+                name: '温度',
+                type: 'bar',
+                data: {{ Temperature|safe}}
+            }]
+        };
+    mychart.setOption(option);
+
+ var mychart1 = echarts.init(document.getElementById('soil_Avg_line-chart'));
+ var option1 = {
+            title: {
+                text: '湿度表'
+            },
+            tooltip: {},
+            legend: {
+                data:['湿度']
+            },
+            xAxis: {
+                data: {{ ids|safe }}
+            },
+            yAxis: {},
+            series: [{
+                name: '湿度',
+                type: 'line',
+                data: {{ soil_Avg|safe}}
+            }]
+        };
+    mychart1.setOption(option1);
+
+ var mychart2 = echarts.init(document.getElementById('Illumination_line-chart'));
+ var option2 = {
+            title: {
+                text: '光照强度'
+            },
+            tooltip: {},
+            legend: {
+                data:['光照']
+            },
+            xAxis: {
+                data: {{ ids|safe }}
+            },
+            yAxis: {},
+            series: [{
+                name: '光照',
+                type: 'line',
+                data: {{ Illumination|safe}}
+            }]
+        };
+    mychart2.setOption(option2);
+ {#var mychart1 = echarts.init(document.getElementById('line-chart'));#}
+ {#var option1 = {#}
+ {#           title: {#}
+ {#               text: '湿度表'#}
+ {#           },#}
+ {#           tooltip: {},#}
+ {#           legend: {#}
+ {#               data:['湿度']#}
+ {#           },#}
+ {#           xAxis: {#}
+ {#               dataz: {{ ids|safe }}#}
+ {#           },#}
+ {#           yAxis: {},#}
+ {#           series: [{#}
+ {#               name: '湿度',#}
+ {#               type: 'line',#}
+ {#               dataz: {{ Illumination|safe }}#}
+ {#           }]#}
+ {#       };#}
+ {#   mychart1.setOption(option1);#}
+</script>
+
+{#<script type="text/javascript">#}
+{# var mychart = echarts.init(document.getElementById('radar-chart'));#}
+{#     var option = { //可以去官网上根据每个案例不同的option去写各种图形#}
+{#            title: {   //标题#}
+{#                text: '综合表'#}
+{#            },#}
+{#            tooltip: {   //提示框，鼠标悬浮交互时的信息提示#}
+{#                show:true,#}
+{#                trigger: 'axis'#}
+{#            },#}
+{#            legend: {    //图例，每个图表最多仅有一个图例#}
+{#                left : '30%',#}
+{#                itemWidth: 15,#}
+{#                itemHeight: 10,#}
+{#                itemGap: 30,         #}
+{#                data: ['箱内环境', '实际环境',]#}
+{#            },#}
+{#            polar: [{    //极坐标 #}
+{#                indicator: [{text: '温度',max: 100,color:'#000'}, #}
+{#                            {text: '待定',max: 100,color:'#000'},#}
+{#                            {text: '湿度',max: 100,color:'#000'},#}
+{#                            {text: '待定',max: 100,color:'#000'},#}
+{#                            {text: '水分',max: 100,color:'#000'},#}
+{#                            {text: '待定',max: 100,color:'#000'}#}
+{#                           ],#}
+{#                radius: 90,      #}
+{#                startAngle: 120   // 改变雷达图的旋转度数#}
+{#            }],#}
+{#            series: [{         // 驱动图表生成的数据内容数组，数组中每一项为一个系列的选项及数据#}
+{#                name: '总点击量',#}
+{#                type: 'radar',#}
+{#                itemStyle: {//图形样式，可设置图表内图形的默认样式和强调样式（悬浮时样式）：#}
+{#                    normal: {#}
+{#                        areaStyle: {#}
+{#                            type: 'default'#}
+{#                        }#}
+{#                    }#}
+{#                },#}
+{#                data: [{#}
+{#                    name: '箱内环境',#}
+{#                    value: [{}]      //外部加载，也可以通过ajax去加载外部数据。       #}
+{#                }, {#}
+{#                    name: '实际环境',#}
+{#                    value: [{}]#}
+{#                }]#}
+{#            }]#}
+{#        };#}
+{#    mychart.setOption(option);#}
+{#</script>#}
+<script type="text/javascript">
+ var mychart = echarts.init(document.getElementById('pie-chart'));
+ var option = {
+            title: {
+                text: '元素表'
+            },
+            tooltip: {},
+            legend: {
+                data:[]
+            },
+            series : [{
+            name: '',
+            type: 'pie',
+            radius: '70%',
+            data:[
+                {value:30, name:'碳'},
+                {value:10, name:'磷'},
+                {value:35, name:'氧'},
+                {value:17, name:'氮'},
+                {value:8, name:'钾'}
+            ]}
+    ]};
+    mychart.setOption(option);
+</script>
+<script>
+ $("#lists li a").children().children().children().on("click",function(){
+            $(this).css("backgroundColor","red").siblings().css("backgroundColor","white")
+        })
+        $("#lists li a").children().children().children().on("mouseover",function(){
+            $(this).css("backgroundColor","red").siblings().css("backgroundColor","white")
+        })
+
+
+
+</script>
 </body>
 </html>
